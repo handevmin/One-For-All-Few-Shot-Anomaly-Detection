@@ -2,7 +2,7 @@
 
 Official implement of [One-for-All Few-Shot Anomaly Detection via Instance-Induced Prompt Learning](https://openreview.net/forum?id=Zzs3JwknAY)
 
-![framework](D:\ICLR\IIPAD\framework.png)
+![framework](https://github.com/Vanssssry/One-For-All-Few-Shot-Anomaly-Detection/blob/main/framework.png)
 
 
 
