@@ -420,14 +420,14 @@ class VisionTransformer(nn.Module):
                 normal_patch_token = self.ln_post(patch_token[0].permute(1, 0, 2)) @ self.proj  # LND -> NLD
                 # normal_patch_token = self.in_post(patch_token).permute(1, 0, 2) @ self.proj  # LND -> NLD
                 # normal_patch_token = patch_token.permute(1, 0, 2) @ self.proj  # LND -> NLD
-                anomaly_patch_token = self.ln_post(patch_token[0].permute(1, 0, 2) + self.anomaly_pos) @ self.proj  # LND -> NLD
+                # anomaly_patch_token = self.ln_post(patch_token[0].permute(1, 0, 2) + self.anomaly_pos) @ self.proj  # LND -> NLD
                 # patch_token = self.ln_post(patch_token.permute(1, 0, 2) + pos) @ self.proj  # LND -> NLD
                 # patch_token = patch_token.permute(1, 0, 2) @ self.proj
                 # patch_token += pos @ self.proj
                 
                 patch_token_memory.append(patch_token[1].permute(1, 0, 2))
                 patch_token_list.append(normal_patch_token)
-                anomaly_patch_token_list.append(anomaly_patch_token)
+                # anomaly_patch_token_list.append(anomaly_patch_token)
             patch_tokens = patch_token_list
             anomaly_patch_tokens = anomaly_patch_token_list
             
